@@ -1,0 +1,51 @@
+@import "variables";
+
+$spaces: (1, 2, 3, 4, 5);
+
+@each $space in $spaces {
+  .m#{$space} {
+    margin: #{$space}rem;
+  }
+
+  .mr#{$space} {
+    margin-right: #{$space}rem;
+  }
+
+  .ml#{$space} {
+    margin-left: #{$space}rem;
+  }
+
+  .mt#{$space} {
+    margin-top: #{$space}rem;
+  }
+
+  .mb#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+}
+
+// Functions - use function to set the color
+@function set-font-color($color) {
+  @if (lightness($color)>40) {
+    @return var(--btn-font-color); // Used custom properties
+  } @else {
+    @return var(--btn-font-hover-color);
+  }
+}
+
+//Mixins - use mixin to set the background and font color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-font-color($color);
+}
+
+
+// Placeholder Selectors
+%submit-button {
+  border-radius: 0;
+  border: none;
+  @include set-background($primary);
+  &:hover {
+    @include set-background($secondary);
+  }
+}

@@ -1,0 +1,7 @@
+@import "src/scss/modules/features";
+
+input.submit {
+  @extend %submit-button;
+  padding: 10px;
+  width: 100px;
+}

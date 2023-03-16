@@ -1,0 +1,54 @@
+@import "src/scss/modules/variables";
+@import "src/scss/modules/features";
+
+html, body {
+  margin: 0;
+  background: $primary-background;
+}
+
+.title {
+  position: fixed;
+  left: 50%;
+  margin: 0 0 0 -50px;
+}
+
+nav {
+  height: 38px;
+
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  a {
+    @include set-background($primary); // used mixins
+    padding: 10px 20px;
+    text-decoration: none;
+    float: right;
+    margin: 0 20px;
+
+    &:hover {
+      @include set-background($secondary);
+    }
+
+    &:first-child {
+      float: left;
+    }
+  }
+}
+
+.coffee-shop-img {
+  height: calc(100vh - 44px);
+  width: 100vw;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  @include set-background($primary);
+  width: 99%;
+  text-align: right;
+  padding: 10px;
+}

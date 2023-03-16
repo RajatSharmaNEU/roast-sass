@@ -1,0 +1,15 @@
+// Variable
+$primary: rosybrown;
+$secondary: saddlebrown;
+$text-color: black;
+$text-color-secondary: white;
+$primary-background: bisque;
+
+// Custom properties & Interpolation
+// Created Custom Properties
+:root {
+  --btn-color: #{$primary};
+  --btn-color-hover: #{$secondary};
+  --btn-font-color: #{$text-color};
+  --btn-font-hover-color: #{$text-color-secondary};
+}

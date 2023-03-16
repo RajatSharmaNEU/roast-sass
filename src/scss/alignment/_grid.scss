@@ -1,0 +1,14 @@
+.table-grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 100px 150px auto 100px 100px;
+  grid-template-rows: auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px 150px;
+  grid-template-rows: auto;
+  margin-bottom: 20px;
+}
